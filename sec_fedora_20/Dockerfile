@@ -1,16 +1,14 @@
-From centos:6
+From fedora:20
 
 MAINTAINER ug1y yinhao746746@163.com
 
-RUN yum install -y openssh openssh-clients openssh-server telnet telnet-server
-RUN yum install -y gcc vim iptstate system-config-firewall wireshark squid
+RUN yum install -y openssh openssh-clients telnet zsh gcc
+RUN yum install -y john vim nmap hping3 wireshark
 
 RUN echo password | passwd --stdin root
 RUN useradd -m student
 RUN echo password | passwd --stdin student
 RUN useradd -m Instructor
 RUN echo password | passwd --stdin Instructor
-
-RUN service sshd start
 
 CMD /bin/bash
