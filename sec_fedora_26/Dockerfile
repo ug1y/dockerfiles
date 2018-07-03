@@ -9,7 +9,7 @@ RUN dnf install -y file which findutils passwd man net-tools procps-ng
 RUN echo password | passwd --stdin root
 RUN useradd -m student
 RUN echo password | passwd --stdin student
-RUN useradd -m Instructor
-RUN echo password | passwd --stdin Instructor
+RUN useradd -m instructor
+RUN echo password | passwd --stdin instructor
 
 CMD /bin/bash

@@ -8,7 +8,7 @@ RUN yum install -y mlocate john vim nmap hping3 wireshark
 RUN echo password | passwd --stdin root
 RUN useradd -m student
 RUN echo password | passwd --stdin student
-RUN useradd -m Instructor
-RUN echo password | passwd --stdin Instructor
+RUN useradd -m instructor
+RUN echo password | passwd --stdin instructor
 
 CMD /bin/bash

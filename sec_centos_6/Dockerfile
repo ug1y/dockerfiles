@@ -8,8 +8,8 @@ RUN yum install -y gcc gdb vim iptstate system-config-firewall wireshark squid
 RUN echo password | passwd --stdin root
 RUN useradd -m student
 RUN echo password | passwd --stdin student
-RUN useradd -m Instructor
-RUN echo password | passwd --stdin Instructor
+RUN useradd -m instructor
+RUN echo password | passwd --stdin instructor
 
 RUN service sshd start
 
